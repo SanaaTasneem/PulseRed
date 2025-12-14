@@ -1,0 +1,185 @@
+.page-container {
+  margin: 80px auto 40px auto;
+  max-width: 900px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.request-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #b30000;
+  margin-bottom: 18px;
+  margin-top: -35px;
+}
+
+.request-form {
+  max-width: 650px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  font-size: 20px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background: #fafafa;
+  transition: border 0.2s ease, background-color 0.2s ease;
+  box-sizing: border-box;
+  height: 48px;
+}
+
+textarea {
+  min-height: 60px;
+  max-height: 80px;
+  height: auto;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #b30000;
+  background-color: #fff;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background-color: #b30000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #8a0000;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.matches-container {
+  margin-top: 45px;
+  text-align: center;
+}
+
+.matches-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #b30000;
+  margin-bottom: 25px;
+}
+
+.matches-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.match-card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  transition: 0.2s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-4px);
+}
+
+.blood-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.match-name {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.match-meta {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Blood Type Colors */
+.blood-Op { background: #cc0000; }
+.blood-On { background: #990000; }
+.blood-Ap { background: #2965ff; }
+.blood-An { background: #003cbf; }
+.blood-Bp { background: #009e4f; }
+.blood-Bn { background: #006e35; }
+.blood-ABp { background: #8b00a8; }
+.blood-ABn { background: #550066; }
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ddd;
+  border-top: 6px solid #b30000;
+  border-radius: 50%;
+  margin: 25px auto;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.view-more-btn {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background-color: #0046b8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #00348a;
+  transform: translateY(-3px);
+}
+
+.view-more-btn:active {
+  transform: translateY(0);
+}

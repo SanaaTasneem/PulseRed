@@ -1,0 +1,170 @@
+/* WRAPPER */
+.ai-matchability-wrapper {
+  padding: 12px 18px 20px;
+}
+
+/* SECTION TITLE */
+.ai-section-title {
+  text-align: left;
+  font-size: 22px;        /* slightly bigger */
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #5a0b0b;
+}
+
+/* LOADING TEXT */
+.ai-loading {
+  font-size: 14px;
+  color: #666;
+}
+
+/* HEATMAP GRID — slightly bigger */
+.ai-heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(75px, 1fr)); /* was 60px */
+  gap: 12px;                                            /* was 10px */
+  margin-bottom: 14px;
+}
+
+/* HEATMAP TILE — pastel preserved, only slight size increase */
+.ai-heatmap-tile {
+  border-radius: 12px;           /* softer */
+  padding: 12px 10px;            /* larger */
+  text-align: center;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+  font-size: 14px;               /* was 13px */
+
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.45s ease-out forwards;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HOVER EFFECT */
+.ai-heatmap-tile:hover {
+  transform: translateY(-6px);
+  transition: 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.14);
+}
+
+/* PASTEL COLOR PALETTE (unchanged, preserved) */
+.level-easy {
+  background: #d8f5d0;
+  border: 2px solid #a6e3a1;
+}
+
+.level-moderate {
+  background: #fff1cc;
+  border: 2px solid #ffd88b;
+}
+
+.level-hard {
+  background: #ffe0d4;
+  border: 2px solid #ffbda8;
+}
+
+.level-critical {
+  background: #ffd6d9;
+  border: 2px solid #ff9aa5;
+}
+
+/* TILE CONTENT (slightly enlarged fonts) */
+.tile-bloodtype {
+  font-weight: 800;
+  font-size: 18px;        /* was 16px */
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.tile-score {
+  font-weight: 700;
+  font-size: 15px;        /* was smaller */
+  margin-bottom: 3px;
+  color: #444;
+}
+
+.tile-label {
+  font-size: 13px;        /* was 12px */
+  opacity: 0.9;
+}
+
+/* LEGEND — slightly bigger */
+.ai-legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;        /* was 12px */
+  margin-bottom: 12px;
+}
+
+.legend-box {
+  width: 16px;            /* slightly bigger */
+  height: 9px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+/* Legend Colors */
+.legend-box.level-easy {
+  background: #a6e3a1;
+}
+
+.legend-box.level-moderate {
+  background: #ffd88b;
+}
+
+.legend-box.level-hard {
+  background: #ffbda8;
+}
+
+.legend-box.level-critical {
+  background: #ff9aa5;
+}
+
+/* INTERPRETATION BOX — cleaner, slightly bigger */
+.ai-interpretation {
+  margin-top: 8px;
+  padding: 14px 16px;
+  background: #fff7f7;
+  border-radius: 12px;
+  border: 1px solid rgba(183, 28, 28, 0.20);
+  font-size: 14px;
+  line-height: 1.55;
+  color: #444;
+}
+
+.ai-interpretation h4 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #b30000;
+}
+
+.ai-interpretation-summary {
+  font-weight: 700;
+  color: #b30000;
+  margin-bottom: 6px;
+  font-size: 14.5px;
+}
+
+.ai-interpretation-text {
+  font-size: 14px;
+  color: #5a0b0b;
+  margin-top: 4px;
+  line-height: 1.55;
+}
+
+.ai-interpretation-divider {
+  height: 1px;
+  background: rgba(183, 28, 28, 0.25);
+  margin: 8px 0;
+}

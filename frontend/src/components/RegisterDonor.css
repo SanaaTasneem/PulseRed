@@ -1,0 +1,78 @@
+.register-page-wrapper {
+  max-width: 900px;
+  margin: 80px auto 40px auto; 
+  text-align: center;
+}
+
+.register-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #b30000;
+  margin-bottom: 18px;
+  margin-top: -35px; 
+}
+
+.register-container {
+  max-width: 650px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.row input,
+.row select {
+  flex: 1;
+}
+
+.register-form input,
+.register-form select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: border 0.2s ease;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  border: 1px solid #b30000;
+  background: #fff;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background-color: #b30000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.register-btn:hover {
+  background-color: #8a0000;
+  transform: translateY(-2px);
+}
+
+.register-btn:active {
+  transform: translateY(0);
+}

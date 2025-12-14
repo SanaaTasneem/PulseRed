@@ -1,0 +1,209 @@
+.page-container {
+  margin: 80px auto 40px auto;
+  max-width: 900px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Title */
+.notify-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #b30000;
+  margin-bottom: 18px;
+  margin-top: -35px;
+}
+
+.notify-subtitle {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+/* Progress bar wrapper */
+.progress-wrapper {
+  max-width: 550px;
+  margin: 0 auto 30px auto;
+  text-align: left;
+}
+
+.progress-label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #eaeaea;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #28a745;
+  border-radius: 999px;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Grid */
+.notify-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
+}
+
+/* Card Styling */
+.notify-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid rgba(179,0,0,0.08);
+}
+
+.notify-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  border-color: rgba(179, 0, 0, 0.3);
+}
+
+/* Name */
+.notify-name {
+  font-size: 22px;
+  margin: 12px 0 6px 0;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.notify-card:hover .notify-name {
+  color: #b30000;
+}
+
+/* Meta */
+.notify-meta {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Message */
+.notif-message {
+  font-size: 14px;
+  margin: 6px 0 10px 0;
+  color: #333;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Status Pill */
+.status-pill {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 14px;
+  transition: 0.15s ease;
+}
+
+/* Glow effect when pending */
+.status-pending {
+  background: #b30000;
+  box-shadow: 0 0 8px rgba(179,0,0,0.5);
+}
+
+.status-responded {
+  background: #28a745;
+  box-shadow: 0 0 8px rgba(40,167,69,0.4);
+}
+
+/* Button */
+.notify-btn {
+  background: #b30000;
+  color: white;
+  padding: 9px 18px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.notify-btn:hover {
+  background: #8a0000;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .notify-name {
+    font-size: 18px;
+  }
+
+  .notify-btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .page-container {
+    margin-top: 130px; 
+  }
+}
+
+.blood-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0 28px 0;
+}
+
+.filter-pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+  transform: translateY(-1px);
+}
+
+.filter-pill.active {
+  background: #b30000;
+  color: #fff;
+  border-color: #b30000;
+}
+
+/* Blood colors */
+.pill-Op { background:#cc0000; color:#fff; }
+.pill-On { background:#990000; color:#fff; }
+.pill-Ap { background:#2965ff; color:#fff; }
+.pill-An { background:#003cbf; color:#fff; }
+.pill-Bp { background:#009e4f; color:#fff; }
+.pill-Bn { background:#006e35; color:#fff; }
+.pill-ABp { background:#8b00a8; color:#fff; }
+.pill-ABn { background:#550066; color:#fff; }
+
+.filter-pill.active.pill-Op,
+.filter-pill.active.pill-On,
+.filter-pill.active.pill-Ap,
+.filter-pill.active.pill-An,
+.filter-pill.active.pill-Bp,
+.filter-pill.active.pill-Bn,
+.filter-pill.active.pill-ABp,
+.filter-pill.active.pill-ABn {
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}

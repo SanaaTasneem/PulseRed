@@ -1,0 +1,332 @@
+.page-container {
+  margin: 80px auto 40px auto;
+  max-width: 900px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.donor-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #b30000;
+  margin-bottom: 18px;
+  margin-top: -35px;
+  animation: fadeDown 0.7s ease-out both;
+}
+
+.donor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: -5px;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .donor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .donor-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.donor-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(200,0,0,0.10);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  padding: 22px 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 330px;
+
+
+  position: relative;
+
+  opacity: 0;
+  animation: slideUp 0.7s ease-out forwards;
+}
+
+/* Staggered entry */
+.donor-card:nth-child(1) { animation-delay: 0.08s; }
+.donor-card:nth-child(2) { animation-delay: 0.16s; }
+.donor-card:nth-child(3) { animation-delay: 0.24s; }
+.donor-card:nth-child(4) { animation-delay: 0.32s; }
+.donor-card:nth-child(5) { animation-delay: 0.40s; }
+.donor-card:nth-child(6) { animation-delay: 0.48s; }
+
+.donor-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+  border-color: rgba(200,0,0,0.25);
+}
+
+.blood-badge {
+  align-self: flex-start;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  margin-top: 2px;
+  line-height: 1;
+  text-align: left;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.6);
+}
+
+/* glow when card hovered */
+.donor-card:hover .blood-badge {
+  box-shadow: 0 0 0 3px rgba(179,0,0,0.18);
+}
+
+.badge-Op { background:#cc0000; }
+.badge-On { background:#990000; }
+.badge-Ap { background:#2965ff; }
+.badge-An { background:#003cbf; }
+.badge-Bp { background:#009e4f; }
+.badge-Bn { background:#006e35; }
+.badge-ABp { background:#8b00a8; }
+.badge-ABn { background:#550066; }
+
+.donor-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.donor-info p {
+  margin: 3px 0;
+  font-size: 16px;
+}
+
+.compact-compat {
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+
+.compact-compat p {
+  font-size: 17px;
+  margin: 6px 0;
+  line-height: 1.45;
+}
+
+.type-label {
+  font-weight: 500;
+  font-size: 15px;
+  margin-right: 6px;
+}
+
+.tag-Op { color:#cc0000; }
+.tag-On { color:#990000; }
+.tag-Ap { color:#2965ff; }
+.tag-An { color:#003cbf; }
+.tag-Bp { color:#009e4f; }
+.tag-Bn { color:#006e35; }
+.tag-ABp { color:#8b00a8; }
+.tag-ABn { color:#550066; }
+
+.donate-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 14px;
+  background: #b30000;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donate-btn:hover {
+  background: #8a0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(179,0,0,0.35);
+}
+
+.inline-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  z-index: 20;
+}
+
+.inline-modal {
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  min-width: 260px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.modal {
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  min-width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.modal-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  text-align: center;
+  outline: none;
+}
+
+.modal-input:focus {
+  border-color: #b30000;
+  box-shadow: 0 0 5px rgba(179, 0, 0, 0.5);
+}
+
+.modal-buttons {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.save-btn {
+  background: #008336;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #b30000;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Animations for donor list */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.success-toast {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  background: #0a7d34;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(10, 125, 52, 0.45);
+  animation: toastPop 0.25s ease-out forwards;
+  z-index: 30;
+}
+
+@keyframes toastPop {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.blood-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 18px 0 28px 0;
+}
+
+.filter-pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+  transform: translateY(-1px);
+}
+
+.filter-pill.active {
+  background: #b30000;
+  color: #fff;
+  border-color: #b30000;
+}
+
+/* Blood color pills */
+.pill-Op { background:#cc0000; color:#fff; }
+.pill-On { background:#990000; color:#fff; }
+.pill-Ap { background:#2965ff; color:#fff; }
+.pill-An { background:#003cbf; color:#fff; }
+.pill-Bp { background:#009e4f; color:#fff; }
+.pill-Bn { background:#006e35; color:#fff; }
+.pill-ABp { background:#8b00a8; color:#fff; }
+.pill-ABn { background:#550066; color:#fff; }
+
+.filter-pill.active.pill-Op,
+.filter-pill.active.pill-On,
+.filter-pill.active.pill-Ap,
+.filter-pill.active.pill-An,
+.filter-pill.active.pill-Bp,
+.filter-pill.active.pill-Bn,
+.filter-pill.active.pill-ABp,
+.filter-pill.active.pill-ABn {
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
